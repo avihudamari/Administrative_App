@@ -1,2 +1,2 @@
 # Administrative_App
-WPF app manipulate a excel files
+WPF app manipulate excel files
