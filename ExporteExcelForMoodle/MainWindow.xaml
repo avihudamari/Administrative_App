@@ -1,0 +1,43 @@
+﻿<Window x:Class="ExporteExcelForMoodle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExporteExcelForMoodle"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" ResizeMode="CanMinimize">
+    <Grid>
+        <TextBlock x:Name="textBlockYear" HorizontalAlignment="Left" Margin="411,30,0,0" TextWrapping="Wrap" Text="שנה" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxYear" HorizontalAlignment="Left" Height="23" Margin="363,51,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="textBlockSemester" HorizontalAlignment="Left" Margin="403,101,0,0" TextWrapping="Wrap" Text="סמסטר" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBoxSemester" HorizontalAlignment="Left" Margin="363,120,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="אלול" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="א" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="ב" HorizontalContentAlignment="Right"/>
+        </ComboBox>
+        <TextBlock x:Name="textBlockMoed" HorizontalAlignment="Left" Margin="413,180,0,0" TextWrapping="Wrap" Text="מועד" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBoxMoed" HorizontalAlignment="Left" Margin="363,195,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="א" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="ב" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="ג" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="מיוחד" HorizontalContentAlignment="Right"/>
+        </ComboBox>
+        <TextBlock x:Name="textBlockKind" HorizontalAlignment="Left" Margin="403,253,0,0" TextWrapping="Wrap" Text="סוג מבחן" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBoxKind" HorizontalAlignment="Left" Margin="363,274,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="1" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="2" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="3" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="4" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="5" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="6" HorizontalContentAlignment="Right"/>
+        </ComboBox>
+        <Button x:Name="exportButton" Content="ייצא" HorizontalAlignment="Left" Height="41" Margin="32,257,0,0" VerticalAlignment="Top" Width="301" Click="exportButton_Click"/>
+        <CheckBox x:Name="checkBoxFullAnswers" FlowDirection="RightToLeft" Content="ייצא עם תשובות מלאות" HorizontalAlignment="Left" Margin="192,236,0,0" VerticalAlignment="Top" Height="21"/>
+        <GroupBox x:Name="groupBox1" Header="הקש פעמיים לתקיית מקור או גרור את הקבצים לכאן" HorizontalAlignment="Left" Margin="19,25,0,0" VerticalAlignment="Top" Width="313" Height="154" FlowDirection="RightToLeft" >
+            <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="131" Margin="0,0,-0.667,-1" VerticalAlignment="Top" Width="302" Drop="listBox_Drop" IsEnabled="True" AllowDrop="True" SelectionMode="Multiple" MouseDoubleClick="listBox_MouseDoubleClick"/>
+
+        </GroupBox>
+        <Button x:Name="buttonCleanAll" Content="נקה הכל" HorizontalAlignment="Left" Height="24" Margin="75,199,0,0" VerticalAlignment="Top" Width="90" Click="buttonCleanAll_Click" ToolTip="'מנקה את כל השדות, את כל הקבצים ואת הכפתור 'יצא עם תשובות מלאות"/>
+        <Button x:Name="buttonDeleteSelectedItems" Content="מחק קבצים" HorizontalAlignment="Left" Height="24" Margin="201,199,0,0" VerticalAlignment="Top" Width="90" Click="buttonDeleteSelectedItems_Click" ToolTip="מוחק קבצים שסומנו"/>
+    </Grid>
+</Window>

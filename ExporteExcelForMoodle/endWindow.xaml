@@ -1,0 +1,16 @@
+﻿<Window x:Class="ExporteExcelForMoodle.endWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExporteExcelForMoodle"
+        mc:Ignorable="d"
+        Title="endWindow" Height="280" Width="700">
+    <Grid>
+        <Label x:Name="mainLabel" Content="הייצוא הסתיים, לסיכום:" HorizontalAlignment="Left" VerticalAlignment="Top" FlowDirection="RightToLeft" FontSize="16" Margin="266,21,0,0"/>
+        <Label x:Name="label" Content=" הקבצים שיוצאו בהצלחה:" HorizontalAlignment="Left" Margin="515,68,0,0" VerticalAlignment="Top" FlowDirection="RightToLeft" Width="157" FontSize="13"/>
+        <Label x:Name="label_Copy" Content="הקבצים שנכשלו בייצוא:" HorizontalAlignment="Left" Margin="188,68,0,0" VerticalAlignment="Top" FlowDirection="RightToLeft" Width="144" FontSize="13"/>
+        <ListBox x:Name="listBoxFail" HorizontalAlignment="Left" Height="129" Margin="21,95,0,0" VerticalAlignment="Top" Width="311"/>
+        <ListBox x:Name="listBoxSuccess" HorizontalAlignment="Left" Height="129" Margin="361,95,0,0" VerticalAlignment="Top" Width="311"/>
+    </Grid>
+</Window>
